@@ -5,10 +5,10 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: E2E Test on Browserstack
+  - name: Build and Test
     task:
       jobs:
-        - name: Build and Test
+        - name: E2E Test on Browserstack
           commands:
             - checkout
             - sem-version node 12
