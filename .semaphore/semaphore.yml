@@ -18,3 +18,12 @@ blocks:
             - npm run test
       secrets:
         - name: Browserstack Creds
+      prologue:
+        commands:
+          - 'wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"'
+          - unzip BrowserStackLocal-linux-x64.zip
+          - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+      epilogue:
+        always:
+          commands:
+            - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop
