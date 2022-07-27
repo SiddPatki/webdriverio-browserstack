@@ -17,7 +17,7 @@ const parallelConfig = {
     osVersion: 'Big Sur'
   }, {
     browserName: 'chrome',
-    device: 'Samsung Galaxy S22 Ultra'
+    device: 'Samsung Galaxy S22 Plus'
   }],
 };
 
